@@ -58,7 +58,7 @@ def keyfree(token):
                 file.write(nhapkey)
                 return
         else:
-            print(f'{Colorate.Horizontal(Colors.red_to_purple,"Key Không Chính Xác Vui Lòng Lấy Lại")}')
+            print(f'{Colorate.Horizontal(Colors.red_to_purple,"Key Không Tồn Tại hoặc Hết Hạn")}')
     taokey = requests.get('https://dhphuoc21.xyz/key').json()
     if taokey['status'] == 'success':
         key = taokey['key']
@@ -76,6 +76,7 @@ def keyfree(token):
         ip = check['ip']
         time = check['time']
         keycode = nhapkey[:3]+'*'*10
+        banner()
         print(f'{Colorate.Horizontal(Colors.purple_to_blue,"┌───────────────────────────────┐")}')
         print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(Colors.blue_to_cyan,"        Thông Tin key        ")}{Colorate.Horizontal(Colors.blue_to_purple,"  │")}')
         print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
@@ -87,7 +88,7 @@ def keyfree(token):
         with open(key_file, "w") as file:
             file.write(nhapkey)
     else:
-        print(f'{Colorate.Horizontal(Colors.red_to_purple,"Key Không Chính Xác Vui Lòng Lấy Lại")}')
+        print(f'{Colorate.Horizontal(Colors.red_to_purple,"Key Không Tồn Tại hoặc Hết Hạn")}')
         return
 def keyphi():
     return
@@ -100,25 +101,34 @@ print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└────────�
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}1.1{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Thường")}')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}1.2{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Instagram")}')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}1.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Page")} {vang}({red}bảo Trì{vang})')
-print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}1.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ TikTok")}')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}1.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ TikTok")} {vang}({red}bảo Trì{vang})')
 print(red+"-"*70)
 print(f'{Colorate.Horizontal(Colors.purple_to_blue,"┌───────────────────────────────┐")}')
 print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(Colors.blue_to_cyan,"        Tương Tác Chéo        ")}{Colorate.Horizontal(Colors.blue_to_purple," │")}')
 print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.1{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Thường")}')
-print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.2{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Instagram")}')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.2{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Instagram")} {vang}({red}bảo Trì{vang})')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Page")}')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ TikTok")}')
 print(red+"-"*70)
 chon = input(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.blue_to_white,"Chọn Chế Độ")}: ')
 try:
     if chon == '1.1':
-        run = requests.get(f'').text
+        run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-tds.py').text
     elif chon == '1.2':
-        run = requests.get(f'').text
+        run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-igtds.py').text
     elif chon == '1.3':
         run = requests.get(f'').text
     elif chon == '1.4':
         run = requests.get(f'').text
+    elif chon == '2.1':
+        run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-ttcfb.py').text
+    elif chon == '2.2':
+        run = requests.get(f'').text
+    elif chon == '2.3':
+        run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-ttcpage.py').text 
+    elif chon == '2.4':
+        run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-ttctiktok.py').text 
     else:
         run = print(f'{Colorate.Horizontal(Colors.red_to_purple,"Lựa Chọn Không Xác Định")}')
 except:
