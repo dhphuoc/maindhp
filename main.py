@@ -1,4 +1,4 @@
-import requests, socket, os
+import requests, os
 from pystyle import Write, Colors, Colorate
 from datetime import datetime
 from time import sleep
