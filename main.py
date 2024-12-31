@@ -61,42 +61,38 @@ def keyfree(token):
     taokey = requests.get('https://dhphuoc21.xyz/key').json()
     if taokey['status'] == 'success':
         key = taokey['key']
-        link = requests.get(f'https://link4m.co/api-shorten/v2?api={token}&url=https://www.dhphuoc21.xyz/test.php?key={key}').json()
-        print(link)
-        if link['status'] == 'success':
-            get = link['shortenedUrl']
-            banner()
-            print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.yellow_to_green,"Key Vô Tool Là")}{trang}: {luc}DHP07')
-            print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.blue_to_purple,"Link Vượt Key Là")}{trang}: {luc}{get}')
-            while dem < 3:
-                nhapkey = input(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_cyan,"Nhập Key Đã Vượt")}: ')
-                check = requests.post('https://www.dhphuoc21.xyz/key', data={'key': nhapkey}).json()
-                if check['status'] == 'success':
-                    name = check['name']
-                    ip = check['ip']
-                    time = check['time']
-                    keycode = nhapkey[:3] + '*' * 10
-                    banner()
-                    print(f'{Colorate.Horizontal(Colors.purple_to_blue,"┌───────────────────────────────┐")}')
-                    print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(Colors.blue_to_cyan,"        Thông Tin key        ")}{Colorate.Horizontal(Colors.blue_to_purple,"  │")}')
-                    print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
-                    print(f'{red}[{trang}<>{red}] {luc}Số IP Chủ Key{trang}: {vang}{ip}')
-                    print(f'{red}[{trang}<>{red}] {luc}Key Tool{trang}: {vang}{keycode}')
-                    print(f'{red}[{trang}<>{red}] {luc}Họ Và Tên Chủ key{trang}: {vang}{name}')
-                    print(f'{red}[{trang}<>{red}] {luc}Số Giờ Còn Lại{trang}: {vang}{time}')
-                    print(red + "-" * 70)
-                    with open(key_file, "w") as file:
-                        file.write(nhapkey)
-                    return
-                else:
-                    dem += 1
-                    print(f'{Colorate.Horizontal(Colors.red_to_purple,f"Key Không Tồn Tại hoặc Hết Hạn, Đã Nhập {dem} Lần")}')
-                    if dem == 3:
-                        print(f'{Colorate.Horizontal(Colors.red_to_purple,"Bạn Đã Nhập Sai Key 3 Lần Rồi!")}')
-                        quit()
-        else:
-            print(f'{Colorate.Horizontal(Colors.red_to_purple,"Server Key Free Bị Lỗi Rồi Xài Phí Đi")}')
-            quit()
+        # link = requests.get(f'https://link4m.co/api-shorten/v2?api={token}&url=https://www.dhphuoc21.xyz/test.php?key={key}').json()
+        # if link['status'] == 'success':
+        #     get = link['shortenedUrl']
+        banner()
+        print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.yellow_to_green,"Key Vô Tool Là")}{trang}: {luc}DHP07')
+        # print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.blue_to_purple,"Link Vượt Key Là")}{trang}: {luc}{get}')
+        while dem < 3:
+            nhapkey = input(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_cyan,"Nhập Key Đã Vượt")}: ')
+            check = requests.post('https://www.dhphuoc21.xyz/key', data={'key': nhapkey}).json()
+            if check['status'] == 'success':
+                name = check['name']
+                ip = check['ip']
+                time = check['time']
+                keycode = nhapkey[:3] + '*' * 10
+                banner()
+                print(f'{Colorate.Horizontal(Colors.purple_to_blue,"┌───────────────────────────────┐")}')
+                print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(Colors.blue_to_cyan,"        Thông Tin key        ")}{Colorate.Horizontal(Colors.blue_to_purple,"  │")}')
+                print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
+                print(f'{red}[{trang}<>{red}] {luc}Số IP Chủ Key{trang}: {vang}{ip}')
+                print(f'{red}[{trang}<>{red}] {luc}Key Tool{trang}: {vang}{keycode}')
+                print(f'{red}[{trang}<>{red}] {luc}Họ Và Tên Chủ key{trang}: {vang}{name}')
+                print(f'{red}[{trang}<>{red}] {luc}Số Giờ Còn Lại{trang}: {vang}{time}')
+                print(red + "-" * 70)
+                with open(key_file, "w") as file:
+                    file.write(nhapkey)
+                return
+            else:
+                dem += 1
+                print(f'{Colorate.Horizontal(Colors.red_to_purple,f"Key Không Tồn Tại hoặc Hết Hạn, Đã Nhập {dem} Lần")}')
+                if dem == 3:
+                    print(f'{Colorate.Horizontal(Colors.red_to_purple,"Bạn Đã Nhập Sai Key 3 Lần Rồi!")}')
+                    quit()
     else:
         print(f'{Colorate.Horizontal(Colors.red_to_purple,"Server Key Free Bị Lỗi Rồi Xài Phí Đi")}')
         quit()
