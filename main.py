@@ -116,6 +116,15 @@ print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhậ
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Page")} {vang}({red}bảo Trì{vang})')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ TikTok")}')
 print(red+"-"*70)
+print(f'{Colorate.Horizontal(Colors.purple_to_blue,"┌───────────────────────────────┐")}')
+print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(Colors.blue_to_cyan,"        Buff Tương Tác        ")}{Colorate.Horizontal(Colors.blue_to_purple," │")}')
+print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}3.1{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Tăng View Story Page")} {vang}({red}bảo Trì{vang})')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}3.2{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Tăng Follow Page")} {vang}({red}bảo Trì{vang})')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}3.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Tăng Comment Page")} {vang}({red}bảo Trì{vang})')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}3.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Zefoy Selenium")} {vang}({red}bảo Trì{vang})')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}3.5{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Tăng Share Ảo")} {vang}({red}bảo Trì{vang})')
+print(red+"-"*70)
 chon = input(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.blue_to_white,"Chọn Chế Độ")}: ')
 try:
     if chon == '1.1':
@@ -134,6 +143,16 @@ try:
         run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-ttcpage.py').text 
     elif chon == '2.4':
         run = requests.get(f'https://raw.githubusercontent.com/dhphuoc/maindhp/refs/heads/main/obf-ttctiktok.py').text 
+    elif chon == '3.1':
+        run = requests.get(f'').text
+    elif chon == '3.2':
+        run = requests.get(f'').text
+    elif chon == '3.3':
+        run = requests.get(f'').text 
+    elif chon == '3.4':
+        run = requests.get(f'').text 
+    elif chon == '3.5':
+        run = requests.get(f'').text
     else:
         run = print(f'{Colorate.Horizontal(Colors.red_to_purple,"Lựa Chọn Không Xác Định")}')
 except:
