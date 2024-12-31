@@ -113,7 +113,7 @@ print(f'{Colorate.Horizontal(Colors.purple_to_blue,"│")}{Colorate.Horizontal(C
 print(f'{Colorate.Horizontal(Colors.purple_to_blue,"└───────────────────────────────┘")}')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.1{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Thường")}')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.2{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Instagram")} {vang}({red}bảo Trì{vang})')
-print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Page {vang}({red}bảo Trì{vang})")}')
+print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.3{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ Facebook Page")} {vang}({red}bảo Trì{vang})')
 print(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Nhập")} {red}[{vang}2.4{red}] {Colorate.Horizontal(Colors.green_to_yellow,"Để Chọn Chế Độ TikTok")}')
 print(red+"-"*70)
 chon = input(f'{red}[{trang}<>{red}] {Colorate.Horizontal(Colors.blue_to_white,"Chọn Chế Độ")}: ')
